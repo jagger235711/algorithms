@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "实验四各种内部排序算法的实现及性能比较", "实验四各种内部排序算法的实现及性能比较.vcxproj", "{60A98433-BA9B-4176-B750-6A4C4212E4C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Debug|x64.ActiveCfg = Debug|x64
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Debug|x64.Build.0 = Debug|x64
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Debug|x86.ActiveCfg = Debug|Win32
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Debug|x86.Build.0 = Debug|Win32
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Release|x64.ActiveCfg = Release|x64
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Release|x64.Build.0 = Release|x64
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Release|x86.ActiveCfg = Release|Win32
+		{60A98433-BA9B-4176-B750-6A4C4212E4C2}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F38E1BC8-48E9-4EFE-B42C-4DB19C002E50}
+	EndGlobalSection
+EndGlobal
