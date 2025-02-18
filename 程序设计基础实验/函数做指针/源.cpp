@@ -1,4 +1,4 @@
-//Ö¸Õë×÷Îªº¯Êı²ÎÊıµÄÁ·Ï°
+//æŒ‡é’ˆä½œä¸ºå‡½æ•°å‚æ•°çš„ç»ƒä¹ 
 #include<iostream>
 using namespace std;
 void Swap(int* p1, int* p2);
