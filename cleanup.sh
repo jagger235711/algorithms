@@ -1,7 +1,7 @@
-#!/bin/bash
-
-# Step 1: Create a result directory
-mkdir -p res
-
-# Step 2: Find and copy .cpp files and folders, excluding the current directory and 'res' directory
-find . \( -name "*.cpp" -o -type d \) -path "./res" -prune -o -exec cp -r --parents \{} res/ \;
+find . -path "./res" -prune -o \( -name "*.cpp" -o -type d \) | while read -r item; do
+    if [ -d "$item" ]; then
+        mkdir -p "res/$item"
+    elif [ -f "$item" ] && [[ "$item" == *.cpp ]]; then
+        cp --parents "$item" res
+    fi
+done
