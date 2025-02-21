@@ -5,7 +5,7 @@
 一元二次方程求根：编程求一元二次方程$ax^2 + bx + c = 0$的根$x_1$和$x_2$。(a!=0)
  */
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include <valarray>
 
 int main()
@@ -35,5 +35,5 @@ int main()
     x1 = (-b + sqrt(tmp)) / (2 * a);
     x2 = (-b - sqrt(tmp)) / (2 * a);
     printf("x1:%f x2:%f\n", x1, x2);
-    return 0;
+    // return 0;
 }
