@@ -62,29 +62,72 @@ int kmpSearchWithNextval(char* text, char* pattern)
     int j = 0; // 模式串的索引
     while (i < n)
     {
-        if (j == -1 || text[i] == pattern[j])
+        if (j == -1 || text[i] == pattern[j]) // 匹配成功或者没一个字母匹配上，两个指针都后移
         {
             i++;
             j++;
+        }
+        else // 否则模式串指针回退到它的最长前缀
+        {
+            j = nextval[j];
         }
 
         if (j == m)
         {
             return i - j; // 找到匹配，返回匹配的起始位置
         }
-        else
-        {
-            j = nextval[j];
-        }
     }
 
     return -1; // 未找到匹配
 }
 
+// 测试用例函数
+void runTestCases() {
+    // 测试用例 1
+    char text1[] = "china123";
+    char pattern1[] = "na12";
+    int result1 = kmpSearchWithNextval(text1, pattern1);
+    if (result1 != -1) {
+        printf("测试用例 1: 模式串在文本串中的起始位置是: %d\n", result1);
+    } else {
+        printf("测试用例 1: 未找到匹配的模式串。\n");
+    }
+
+    // 测试用例 2
+    char text2[] = "abcdefg";
+    char pattern2[] = "xyz";
+    int result2 = kmpSearchWithNextval(text2, pattern2);
+    if (result2 != -1) {
+        printf("测试用例 2: 模式串在文本串中的起始位置是: %d\n", result2);
+    } else {
+        printf("测试用例 2: 未找到匹配的模式串。\n");
+    }
+
+    // 测试用例 3
+    char text3[] = "hello world";
+    char pattern3[] = "world";
+    int result3 = kmpSearchWithNextval(text3, pattern3);
+    if (result3 != -1) {
+        printf("测试用例 3: 模式串在文本串中的起始位置是: %d\n", result3);
+    } else {
+        printf("测试用例 3: 未找到匹配的模式串。\n");
+    }
+}
+
 int main()
 {
-    char text[] = "china123";
-    char pattern[] = "na12";
+    char text[1000];
+    char pattern[1000];
+
+    // 运行测试用例
+    runTestCases();
+
+    // 手动输入主串和子串
+    printf("\n请输入主串: ");
+    scanf("%s", text);
+    printf("请输入子串: ");
+    scanf("%s", pattern);
+
     int result = kmpSearchWithNextval(text, pattern);
 
     if (result != -1)
